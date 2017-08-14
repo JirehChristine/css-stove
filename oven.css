@@ -1,0 +1,258 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font: bold 14px Arial, sans-serif;
+}
+
+/* background gradient */
+html {
+	height: 100%;
+	background: #f9b727;
+	background-size: cover;
+}
+
+h1 {
+	font-family: 'Reem Kufi', "Aria", sans-serif;
+	font-size: 22px;
+}
+.col-8 {
+	position: relative;
+}
+
+/* keep oven centered*/
+.wrapper {
+	display: table;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+#middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#oven {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#home-header {
+	font-size: 30px;
+	text-align: center;
+}
+
+/* Using box shadows to create 3D effects */
+#oven {
+	top: 2%;
+	left: 50%;
+
+	width: 500px;
+	height: 540px;
+
+	padding: 20px 20px 9px;
+
+	background: #9dd2ea;
+	background: linear-gradient(#9dd2ea, #8bceec);
+	border-radius: 12px 12px 2px 2px;
+	box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+	z-index: 0;
+}
+
+/* inset shadow on the screen to create indent */
+.top .screen {
+	height: 40px;
+	width: 505px;
+
+	position: relative;
+	float: right;
+
+	padding: 10px 100px;
+
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+
+	/* typography */
+	font-size: 17px;
+	line-height: 40px;
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-align: right;
+	letter-spacing: 1px;
+}
+
+
+/* stove top and elements */
+#stove {
+	padding: 20px 40px; /* header background */
+	border-radius: 8px 8px 0 0;
+	box-shadow: 0px 2px #fff;
+	background-color: #e0f6fc;
+}
+
+/* dials*/
+
+.dials {
+	margin: 20px;
+}
+
+span.time, .dials span, .top {
+	float: left;
+
+	cursor: pointer;
+
+	width: 70px;
+	height: 70px;
+
+	background: #e5e6e8;
+	border-radius: 50%;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+
+	padding-top: 10%;
+	margin: 12px 20px 10px 0; /* width between dials */
+	color: #000;
+	line-height: 36px;
+	text-align: center;
+
+	/* prevent selection of text inside keys */
+	user-select: none;
+
+	/* Smoothing out hover and active states using css3 transitions */
+	transition: all 0.2s ease;
+}
+
+/* style different type of keys (operators/evaluate/clear) differently */
+.dials span.operator {
+
+	background: #FFF0F5;
+}
+
+.dials span.eval {
+	background: #f1ff92;
+	box-shadow: 0px 4px #9da853;
+	color: #888e5f;
+}
+
+.top span.time {
+	background: #ff9fa8;
+	box-shadow: 0px 4px #ff7c87;
+	color: white;
+}
+
+/* Some hover effects */
+.dials span:hover {
+	background: #cecece;
+	box-shadow: 0px 4px #6b54d3;
+}
+
+.dials span.eval:hover {
+	background: #abb850;
+	box-shadow: 0px 4px #717a33;
+}
+
+.top span.time:hover {
+	background: #cecece;
+	box-shadow: 0px 4px #626770;
+	color: white;
+}
+
+/* simulate "pressed" effect on active state of the keys by removing the box-shadow and moving the keys down a bit */
+.dials span:active {
+	box-shadow: 0px 0px #6b54d3;
+	top: 4px;
+}
+
+.dials span.eval:active {
+	box-shadow: 0px 0px #717a33;
+	top: 4px;
+}
+
+.dials span.time:active {
+	top: 4px;
+	box-shadow: 0px 0px #d3545d;
+}
+
+
+/* Dial positioning for two groups */
+.dials1 {
+	float: left;
+	margin-left: 8px;
+}
+
+.dials2 {
+	float: right;
+	margin-right: 8px;
+}
+
+/* dial ticks */
+.dial-tick {
+	border-radius: 40%;
+	background-color: black;
+	height: 20px;
+	width: 4px;
+	margin-left: 0;
+}
+
+/* No Style Links */
+.dial a {
+	text-decoration: none;
+}
+
+.dial a:visited {
+	color: #000;
+}
+
+/* oven parts */
+.door {
+	display: block;
+	padding: 120px 40px;
+	height: 200px;
+	margin: 130px 5px 55px 5px;
+	border-radius: 8px;
+	background-color: #35383d;
+	box-shadow: 0 0 5px 5px #c4edf2;
+}
+
+#door-handle {
+	padding: 4px 0;
+	margin: -50px 0 0 0;
+	width: 100%;
+	background-color: #d6d7d8;
+	border-radius: 0 0 8px 8px;
+	box-shadow: 0px 2px #fff;
+}
+
+#door-handle:hover {
+	background-color: #f7f8f9;
+	box-shadow: 0px 2px #c6cace;
+}
+
+/* Door Shade */
+.shade {
+	padding: 55px 25px;
+	height: 10px;
+	margin: 25px 0 55px 0;
+	border-radius: 8px;
+	background-color: #626770;
+}
+
+
+/* stove feet */
+#foot-left, #foot-right {
+	height: 30px;
+	width: 68px;
+	background-color: #78d3ed;
+	border-radius: 0 0 4px 4px;
+}
+
+#foot-left {
+	margin: 52px 0 0 -60px;
+	float: left;
+}
+
+#foot-right {
+	float: right;
+	margin: 52px -60px 0 0;
+}
